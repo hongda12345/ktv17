@@ -1,0 +1,592 @@
+@import "base.css";
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    overflow: hidden;
+    background:url("../../img/sjbj.png") center/cover;
+    padding:0.4rem 0.24rem 0;
+    align-items: flex-end;
+}
+header{
+    width:100%;
+    height: 0.88rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    width: 0.4rem;
+    height: 0.4rem;
+}
+header a:first-of-type{
+    background: url("../../img/sd10.png") center/cover;
+}
+p{
+    font-size: 0.36rem;
+    color: #fff;
+}
+nav{
+    width:100%;
+    height:0.68rem;
+    padding:0.07rem;
+    display: flex;
+    margin:0 auto;
+    position: relative;
+}
+nav > li{
+    width:1rem;
+    height: 100%;
+    /*background: #ccc;*/
+    flex:1;
+    padding:0.2rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.24rem;
+    color:#000;
+}
+nav > li.active{
+    color:#fff;
+    border-bottom:2px solid #fff;
+}
+ul.aside{
+    width: 0.3rem;
+    height: auto;
+    /*background: blue;*/
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 22%;
+}
+ul.aside li{
+    width: 0.3rem;
+    height: 0.5em;
+     /*background: yellow;*/
+    font-size: 0.18rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+    text-align: center;
+}
+.container{
+    width:100%;
+    height:auto;
+    position: relative;
+}
+.container .content{
+    display: none;
+}
+.container .content:first-child{
+    display: block;
+}
+.container .singer{
+    width:100%;
+    height:auto;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+.container .rank{
+    width:100%;
+    height:auto;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+#search{
+    width:100%;
+    margin-top:-0.4rem;
+    margin-bottom: 0.3rem;
+}
+#search>input{
+    width:100%;
+    background: #fff;
+    border-radius: 0.07rem;
+    padding:0 2rem;
+    font-size: 0.24rem;
+    color: #ccc;
+    line-height: 0.68rem;
+    text-align: center;
+    border:none;
+    outline: none;
+}
+.tip{
+    width: 100%;
+    height: 0.8rem;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 1.2rem;
+    font-size: 0.5rem;
+    padding: 0 0.3rem;
+    line-height: 0.8rem;
+    color: red;
+    opacity:0;
+}
+.ranksort{
+    width:100%;
+    height:0.68rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    border:0.01rem solid #fff;
+}
+.ranksort>li{
+    height:100%;
+    background: #fff;
+    font-size: 0.24rem;
+    color: #000;
+    line-height: 0.68rem;
+    text-align: center;
+    flex:1;
+    border-right:1px solid #fff;
+}
+.ranksort>li:last-child{
+    border-right:none;
+}
+.ranksort>li.actives{
+    background: none;
+    color:#fff;
+}
+.banner{
+    width:100%;
+    height: 3.2rem;
+    position: relative;
+}
+.banner .pic1{
+    width:4.24rem;
+    height: 2.56rem;
+    background: #ccc;
+    border:3px solid #fff;
+    border-radius: 0.07rem;
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-1.28rem;
+    z-index: 1;
+}
+.banner .pic2{
+    width:5.03rem;
+    height: 3.2rem;
+    background: #ccc;
+    border:3px solid #fff;
+    border-radius: 0.07rem;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left: -2.515rem;
+    z-index:2;
+}
+.banner .pic3{
+    width:4.24rem;
+    height: 2.56rem;
+    background: #ccc;
+    border:3px solid #fff;
+    border-radius: 0.07rem;
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-1.28rem;
+    z-index: 1;
+}
+.banner li img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+div.sou{
+    width:4.58rem;
+    height:0.66rem;
+    background: #fff;
+    position: absolute;
+    bottom:0.18rem;
+    left:50%;
+    margin-left: -2.29rem;
+    border-radius: 0.3rem;
+    border:2px solid #fff;
+    padding-left: 0.3rem;
+    line-height: 0.66rem;
+    color:#585861;
+    font-size: 0.24rem;
+}
+.sou .right{
+    width:0.95rem;
+    height: 0.58rem;
+    background: #FE3491;
+    border-radius: 0 0.3rem 0.3rem 0;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.sou .right img{
+    width:0.42rem;
+    height: 0.42rem;
+    position: absolute;
+    top:0.08rem;
+    right:0.2rem;
+}
+.ranklist{
+    width:100%;
+    height: 6rem;
+    /*background: red;*/
+    overflow: hidden;
+    z-index:100;
+    opacity: 1;
+}
+.singerlist{
+    width:100%;
+    height: 9.2rem;
+    /*background: red;*/
+    overflow: hidden;
+    z-index:100;
+    opacity: 1;
+}
+.singerlist .scroll{
+    width:100%;
+    height:auto;
+    padding-bottom: 1.8rem;
+}
+.singerlist .scroll li img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+.singerlist .scroll li{
+    width:calc(4.11rem + 2.89rem);
+    border:2px solid #fff;
+    boder-bottom:1px;
+    position: relative;
+    text-align: center;
+}
+.singerlist .scroll li .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll>li:first-child{
+    border:2px solid #fff;
+    boder-bottom:1px;
+    width:calc(4.11rem + 2.88rem);
+    height:3.96rem;
+    position: relative;
+}
+.singerlist .scroll li:first-child .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll li:first-child .shadow{
+    width:4.74rem;
+    height:1.42rem;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-0.71rem;
+    margin-left: -2.37rem;
+    text-align: center;
+    line-height: 1.42rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.singerlist .scroll>li:nth-child(2){
+    float: left;
+    border:1px solid #fff;
+    width:2.87rem;
+    height:2.14rem;
+    position: relative;
+}
+.singerlist .scroll li:nth-child(2) .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll>li:nth-child(2) .shadow{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    line-height: 2.14rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.singerlist .scroll>li:nth-child(3){
+    float: left;
+    border:1px solid #fff;
+    width:2.06rem;
+    height:2.14rem;
+    position: relative;
+}
+.singerlist .scroll li:nth-child(3) .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll>li:nth-child(3) .shadow{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    line-height: 2.06rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.singerlist .scroll>li:nth-child(4){
+    float: left;
+    border:1px solid #fff;
+    width:2.06rem;
+    height:2.14rem;
+    position: relative;
+}
+.singerlist .scroll li:nth-child(4) .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll>li:nth-child(4) .shadow{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    line-height: 2.06rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.singerlist .scroll>li:nth-child(5){
+    float: left;
+    border:1px solid #fff;
+    width:2.87rem;
+    height:3.3rem;
+    position: relative;
+}
+.singerlist .scroll li:nth-child(5) .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll>li:nth-child(5) .shadow{
+    width:1.76rem;
+    height:1.02rem;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-0.51rem;
+    margin-left: -0.88rem;
+    text-align: center;
+    line-height: 1.02rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.singerlist .scroll>li:nth-child(6){
+    float: left;
+    border:1px solid #fff;
+    width:4.11rem;
+    height:3.3rem;
+    position: relative;
+}
+.singerlist .scroll li:nth-child(6) .shadow span{
+    font-size: 0.24rem;
+    color:#fff;
+}
+.singerlist .scroll>li:nth-child(6) .shadow{
+    width:1.77rem;
+    height:1.02rem;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-0.51rem;
+    margin-left: -0.88rem;
+    text-align: center;
+    line-height: 1.02rem;
+    font-size: 0.24rem;
+    color: #fff;
+}
+.ranklist .scroll li{
+    width:calc(4.11rem + 2.88rem);
+    boder-bottom:1px;
+    position: relative;
+    display: flex;
+    background: url("../../img/borderBottom.png") no-repeat bottom;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.ranklist .scroll li span{
+    font-size: 0.26rem;
+    color:#ccc;
+}
+.ranklist .scroll li #touxiang{
+    width:1rem;
+    height: 1rem;
+    background: url("../../img/avatar-bg.png") no-repeat center/cover;
+}
+.ranklist .scroll li #touxiang img{
+    display: block;
+    width:90%;
+    height: 90%;
+    border-radius: 0.07rem;
+    margin:0.05rem auto;
+}
+.ranklist .scroll li .son{
+    margin-left: 0.22rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    padding:0.15rem 0;
+}
+.ranklist .scroll li span:first-child{
+    color:#000;
+    margin-bottom: 0.1rem;
+}
+.recommendlist{
+    margin-top: 0.3rem;
+    height: 10rem;
+    /*background: yellow;*/
+    overflow: hidden;
+}
+.recommendlist .scroll{
+    width:100%;
+    height:auto;
+    /*padding-bottom: 0.5rem;*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.recommendlist .scroll li{
+    width:7.03rem;
+    height:3.18rem;
+    background: #ccc;
+    border-radius: 0.08rem;
+    border:3px solid #fff;
+    box-shadow: 2px 2px 5px 2px #FFC2DD;
+    margin-bottom: 0.3rem;
+    position: relative;
+}
+.recommendlist .scroll li img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+.recommendlist .scroll li span{
+    width:3.22rem;
+    height: 0.52rem;
+    background: #3DB7FF;
+    border:0.08rem;
+    text-align: center;
+    line-height: 0.52rem;
+    color:#fff;
+    font-size: 0.24rem;
+    position: absolute;
+    bottom:0.26rem;
+    left:0.66rem;
+    z-index: 2;
+}
+.recommendlist .scroll li .des{
+    width:2.62rem;
+    height: 0.52rem;
+    background: #1AA5F5;
+    position: absolute;
+    right:0.72rem;
+    bottom:0.39rem;
+    padding:0.15rem 0.2rem 0.15rem 0.42rem;
+    line-height: 0.30rem;
+    display: flex;
+    justify-content: space-between;
+}
+div.renshu {
+    display: flex;
+    justify-content: space-around;
+    width:1rem;
+}
+div.tingzhong {
+    display: flex;
+    justify-content: space-around;
+    width:1rem;
+}
+.recommendlist .scroll li .des .ren{
+    width:0.2rem;
+    height:0.2rem;
+    background: yellow;
+}
+.recommendlist .scroll li .des .shu{
+    font-size: 0.18rem;
+    color:#fff;
+}
+.recommendlist .scroll li .des .ting{
+    width:0.2rem;
+    height:0.2rem;
+    background: yellow;
+}
+.recommendlist .scroll li .des .zhong{
+    font-size: 0.18rem;
+    color:#fff;
+}
+.oftenlist{
+    margin-top: 0.3rem;
+}
+.oftenlist .scroll{
+    width:100%;
+    height:auto;
+}
+.oftenlist .scroll li{
+    width:calc(4.11rem + 2.88rem);
+    boder-bottom:1px;
+    position: relative;
+    display: flex;
+    background: url("../../img/borderBottom.png") no-repeat bottom;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.oftenlist .scroll li span{
+    font-size: 0.26rem;
+    color:#ccc;
+}
+.oftenlist .scroll li #touxiang{
+    width:1rem;
+    height: 1rem;
+    background: url("../../img/avatar-bg.png") no-repeat center/cover;
+}
+.oftenlist .scroll li #touxiang img{
+    display: block;
+    width:90%;
+    height: 90%;
+    border-radius: 0.07rem;
+    margin:0.05rem auto;
+}
+.oftenlist .scroll li .son{
+    margin-left: 0.22rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    padding:0.15rem 0;
+}
+.oftenlist .scroll li span:first-child{
+    color:#000;
+    margin-bottom: 0.1rem;
+}
+.oftenlist .scroll li .add{
+    width:0.4rem;
+    height: 0.4rem;
+    background: url("../../img/add_07.png") no-repeat center/cover;
+    position: absolute;
+    right:0.3rem;
+    top:50%;
+    margin-top: -0.5rem;
+}
+ul.aside{
+    width:0.3rem;
+    height: auto;
+    /*background: red;*/
+    text-align: center;
+    position: fixed;
+    top:3.2rem;
+    rght:0;
+}
